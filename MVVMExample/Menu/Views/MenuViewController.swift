@@ -13,7 +13,7 @@ class MenuViewController: UITableViewController {
     var items: [Meal] = []
     var viewModel: MenuViewModel! {
         didSet {
-            viewModel.items.bindAndFire { [unowned self] in
+            viewModel.items.bind { [unowned self] in
                 self.items = $0
                 
                 dispatch_async(dispatch_get_main_queue()) { [unowned self] () in
