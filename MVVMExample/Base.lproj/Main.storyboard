@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zfo-NI-og3">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Menu View Controller-->
+        <scene sceneID="BPE-tB-oqY">
+            <objects>
+                <tableViewController storyboardIdentifier="MenuViewController" id="zfo-NI-og3" customClass="MenuViewController" customModule="MVVMExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="108" sectionHeaderHeight="22" sectionFooterHeight="22" id="roN-Mb-3SY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="mealCell" rowHeight="108" id="VyS-GR-pFz" customClass="MenuCell" customModule="MVVMExample" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VyS-GR-pFz" id="a9c-xO-XXg">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upg-BH-8QE">
+                                            <rect key="frame" x="28" y="28" width="50.5" height="25.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ieL-YB-b5W">
+                                            <rect key="frame" x="28" y="59" width="42" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eh7-va-hOC">
+                                            <rect key="frame" x="28" y="28" width="54" height="169.5"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="eh7-va-hOC" firstAttribute="bottom" secondItem="a9c-xO-XXg" secondAttribute="bottomMargin" constant="20" id="7KT-yQ-ISw"/>
+                                        <constraint firstItem="eh7-va-hOC" firstAttribute="leading" secondItem="a9c-xO-XXg" secondAttribute="leadingMargin" constant="20" id="Xf7-qE-ddE"/>
+                                        <constraint firstItem="eh7-va-hOC" firstAttribute="top" secondItem="a9c-xO-XXg" secondAttribute="topMargin" constant="20" id="cnh-lO-iA1"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="ieL-YB-b5W" secondAttribute="bottom" constant="20" id="dcS-sf-ZAE"/>
+                                        <constraint firstItem="upg-BH-8QE" firstAttribute="leading" secondItem="a9c-xO-XXg" secondAttribute="leadingMargin" constant="20" id="ixb-wU-nCA"/>
+                                        <constraint firstAttribute="centerY" secondItem="eh7-va-hOC" secondAttribute="centerY" id="rag-kG-aMa"/>
+                                        <constraint firstItem="ieL-YB-b5W" firstAttribute="leading" secondItem="a9c-xO-XXg" secondAttribute="leadingMargin" constant="20" id="sq0-1w-M6C"/>
+                                        <constraint firstItem="upg-BH-8QE" firstAttribute="top" secondItem="a9c-xO-XXg" secondAttribute="topMargin" constant="20" id="vHK-z0-LOa"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="subviews">
+                                            <exclude reference="eh7-va-hOC"/>
+                                        </mask>
+                                        <mask key="constraints">
+                                            <exclude reference="7KT-yQ-ISw"/>
+                                            <exclude reference="Xf7-qE-ddE"/>
+                                            <exclude reference="cnh-lO-iA1"/>
+                                            <exclude reference="rag-kG-aMa"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="mealNameLabel" destination="upg-BH-8QE" id="6HJ-gP-poE"/>
+                                    <outlet property="mealPriceLabel" destination="ieL-YB-b5W" id="eXm-r7-VGS"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="zfo-NI-og3" id="mJc-Cs-Pt3"/>
+                            <outlet property="delegate" destination="zfo-NI-og3" id="jC4-MF-EfW"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yyv-AJ-WNV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="271" y="249"/>
+        </scene>
+    </scenes>
+</document>
