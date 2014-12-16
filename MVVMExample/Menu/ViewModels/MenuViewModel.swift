@@ -12,8 +12,10 @@ public class MenuViewModel: MenuViewModelType {
     
     public var mealDownloadService: MealDownloadServiceType
     public var items: Bindable<[Meal]>
-    public init(mealService: MealDownloadServiceType) {
-        mealDownloadService = mealService
+    
+    public init(mealDownloadService: MealDownloadServiceType) {
+        
+        self.mealDownloadService = mealDownloadService
         items = Bindable([])
         loadData()
     }

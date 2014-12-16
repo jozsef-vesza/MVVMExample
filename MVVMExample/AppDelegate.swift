@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         let mealDownloadService = MealDownloadService()
-        let menuViewModel = MenuViewModel(mealService: mealDownloadService)
+        let menuViewModel = MenuViewModel(mealDownloadService: mealDownloadService)
         
         let topViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("MenuViewController") as MenuViewController
 

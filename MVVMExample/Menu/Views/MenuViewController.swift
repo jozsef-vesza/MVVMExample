@@ -38,7 +38,7 @@ class MenuViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("mealCell") as MenuCell
         
         cell.mealNameLabel.text = currentItem.name
-        cell.mealPriceLabel.text = "\(currentItem.price)"
+        cell.mealPriceLabel.text = "\(currentItem.price) Ft"
         
         return cell
     }
